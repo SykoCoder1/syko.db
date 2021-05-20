@@ -14,7 +14,7 @@ const SykoCoder = require("syko.db");
 
 let data = SykoCoder.get("SykoCoder")
 
-SykoCoder.set("test", "testt")// set data
+SykoCoder.set("test", "testt")//set data
 
 //Array Methods
 data.push("test")
@@ -31,9 +31,9 @@ SykoCoder.set("test", "testt")// set data
 SykoCoder.push("test", "testt")
 SykoCoder.push("test", { test: "SykoCoder" })
 
-SykoCoder.add("test", 100)
+SykoCoder.add("test", 100)// data add value
 
-SykoCoder.delete("test")
+SykoCoder.delete("test")// data delete
  ```
 
  ## Installation
