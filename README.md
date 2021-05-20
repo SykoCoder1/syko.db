@@ -14,6 +14,8 @@ const SykoCoder = require("syko.db");
 
 let data = SykoCoder.get("SykoCoder")
 
+SykoCoder.get("SykoCoder").data //get data
+
 SykoCoder.set("test", "testt")//set data
 
 //Array Methods
