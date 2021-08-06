@@ -10,32 +10,29 @@
 ## Example
 
 ```
-const SykoCoder = require("syko.db");
+const db = require("syko.db");
 
-let data = SykoCoder.get("SykoCoder")
+//
 
-SykoCoder.get("SykoCoder").data //get data
+//Set Data
+db.set("test", "testt")//set data
 
-SykoCoder.set("test", "testt")//set data
+//All Data
+db.all()
+
+//Get Data
+db.get("test")//get data
+db.fetch("test")//fetch data
+db.has("test")//has data
 
 //Array Methods
-data.push("test")
-data.push({ test: "SykoCoder" })
+db.set("test123", [])
+db.push("test123", { test: "SykoCoder" })
 
-data.add(100)// data add value
+db.add("test1234", 100)// data add value
 
-data.delete()// data delete
+db.delete("test123")// data delete
 
-/////////////////////////////////////////////////////
-
-SykoCoder.set("test", "testt")// set data
-
-SykoCoder.push("test", "testt")
-SykoCoder.push("test", { test: "SykoCoder" })
-
-SykoCoder.add("test", 100)// data add value
-
-SykoCoder.delete("test")// data delete
  ```
 
  ## Installation
