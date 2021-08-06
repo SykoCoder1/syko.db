@@ -9,26 +9,26 @@
 
 ## Example
 
-```
+```js
 const db = require("syko.db");
 
-**Set Data**
+//Set Data
 db.set("test", "testt")//set data
 db.add("test1234", 100)// data add value
 
-**Delete Data**
+//Delete Data
 db.delete("test123")// data delete
 
-**Get Data**
+//Get Data
 db.get("test")//get data
 db.fetch("test")//fetch data
 db.has("test")//has data
 
-**Array Methods**
+//Array Methods
 db.set("test123", [])
 db.push("test123", { test: "SykoCoder" })
 
-**All Data**
+//All Data
 db.all()
 
 
