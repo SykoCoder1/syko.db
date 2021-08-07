@@ -38,6 +38,14 @@ db.filter("data").forEach(a => {
 	}
 })
 
+//Find Data
+db.set("asd", "test")
+
+db.includes("test")
+
+//LowerCase Data
+db.lowerCase("asd-asd-asd-asd")
+
 //Array Methods
 db.set("test123", [])
 db.push("test123", { test: "SykoCoder" })
@@ -46,6 +54,8 @@ db.push("test123", { test: "SykoCoder" })
 db.all()
 
 
+//Info Data
+db.size()
  ```
 
  ## Installation
