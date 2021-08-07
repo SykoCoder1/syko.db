@@ -16,13 +16,27 @@ const db = require("syko.db");
 db.set("test", "testt")//set data
 db.add("test1234", 100)// data add value
 
-//Delete Data
-db.delete("test123")// data delete
-
 //Get Data
 db.get("test")//get data
 db.fetch("test")//fetch data
 db.has("test")//has data
+
+//Delete Data
+db.delete("test123")// data delete
+
+//Filter Data
+var test = [
+  { test: 'test', test3: "test3"},
+  { test2: 'test2',   test4: "test4"}
+]
+
+db.set("data", test)//set array data
+
+db.filter("data").forEach(a => {
+	if(a.test === "test") {
+		console.log(a.test3)
+	}
+})
 
 //Array Methods
 db.set("test123", [])
