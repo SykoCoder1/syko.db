@@ -7,10 +7,25 @@
 
 **Bug Report:** SykoCoder#4105
 
+## Update's
+
+- Backup System
+- Update Data/Array
+- Subtract Data
+- Pull Array
+
 ## Example
 
 ```js
-const db = require("syko.db");
+const Database = require("syko.db");
+
+let db = new Database('./database.json', {
+  backup: {
+    enabled: true,
+    time: 5000,
+    path: './backups/'
+  }
+})
 
 //Set Data
 db.set("test", "testt")//set data
@@ -34,7 +49,7 @@ db.set("data", test)//set array data
 
 db.filter("data").forEach(a => {
 	if(a.test === "test") {
-		console.log(a.test3)
+		console.log(a.test)
 	}
 })
 
@@ -43,16 +58,33 @@ db.set("asd", "test")
 
 db.includes("test")
 
+//Update Data
+db.set("asd", {test: "sykocoder"})
+db.update("asd", {asdasd: syko})
+
+//Subtract Data
+db.set("test123", [])
+db.push("test123", { test: "SykoCoder", asd: "test" })
+db.subtract("test123", "SykoCoder")
+
+//Pull Array
+db.set("Test", ['a', 'b', 'c', 'a', 'b', 'c'])
+db.pull("Test", 'a')
+
 //LowerCase Data
 db.lowerCase("asd-asd-asd-asd")
 
 //Array Methods
 db.set("test123", [])
-db.push("test123", { test: "SykoCoder" })
+db.push("test123", { test: "SykoCoder", asd: "test" })
+db.subtract("test123", "SykoCoder")
+
 
 //All Data
 db.all()
 
+//Ping Data
+db.ping()
 
 //Info Data
 db.size()
